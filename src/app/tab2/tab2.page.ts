@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonButton, IonIcon, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { chevronBackOutline, chevronForwardOutline } from 'ionicons/icons';
@@ -9,13 +10,13 @@ import { ApiService } from '../services/api';
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonButton, IonIcon, IonGrid, IonRow, IonCol]
+  imports: [CommonModule, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonButton, IonIcon, IonGrid, IonRow, IonCol] // <-- CommonModule AQUI
 })
 export class Tab2Page implements OnInit {
   
-  produtos: any[] = [];
+  produtos: any[] = []; 
+  indiceAtual: number = 0;
 
-  // 2. Injetando o ApiService aqui no construtor!
   constructor(private apiService: ApiService) {
     addIcons({ chevronBackOutline, chevronForwardOutline });
   }
@@ -25,9 +26,21 @@ export class Tab2Page implements OnInit {
   }
 
   carregarProdutos() {
-    this.apiService.getProdutos().subscribe((dadosDaInternet) => {
+    this.apiService.getProdutos().subscribe((dadosDaInternet: any) => {
       this.produtos = dadosDaInternet;
-      console.log('Sucesso! Os produtos chegaram:', this.produtos);
     });
+  }
+
+  // --- LÓGICA DOS BOTÕES ---
+  proximoProduto() {
+    if (this.indiceAtual < this.produtos.length - 1) {
+      this.indiceAtual++;
+    }
+  }
+
+  produtoAnterior() {
+    if (this.indiceAtual > 0) {
+      this.indiceAtual--;
+    }
   }
 }

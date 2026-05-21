@@ -8,31 +8,32 @@
 
 <ion-content [fullscreen]="true" class="ion-padding">
   
-  <ion-card>
-    <img class="product-image" alt="Fjallraven Backpack" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" />
+  <ion-card *ngIf="produtos.length > 0">
+    
+    <img class="product-image" [alt]="produtos[indiceAtual].title" [src]="produtos[indiceAtual].image" />
 
     <ion-card-header>
-      <ion-card-title>Fjallraven - Foldsack No. 1</ion-card-title>
-      <ion-card-subtitle>Men's Clothing • $ 109.95</ion-card-subtitle>
+      <ion-card-title>{{ produtos[indiceAtual].title }}</ion-card-title>
+      <ion-card-subtitle>{{ produtos[indiceAtual].category }} • $ {{ produtos[indiceAtual].price }}</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
-      <p>Sua mochila perfeita para o uso diário e caminhadas na floresta. Guarde seu laptop (até 15 polegadas) na capa acolchoada...</p>
+      <p>{{ produtos[indiceAtual].description }}</p>
 
       <ion-grid class="navigation-grid">
         <ion-row class="ion-align-items-center ion-justify-content-between">
           <ion-col size="auto">
-            <ion-button fill="clear" color="dark">
+            <ion-button fill="clear" color="dark" (click)="produtoAnterior()" [disabled]="indiceAtual === 0">
               <ion-icon name="chevron-back-outline" slot="icon-only"></ion-icon>
             </ion-button>
           </ion-col>
           
           <ion-col size="auto">
-            <strong>ID: 1</strong>
+            <strong>ID: {{ produtos[indiceAtual].id }}</strong>
           </ion-col>
 
           <ion-col size="auto">
-            <ion-button fill="clear" color="dark">
+            <ion-button fill="clear" color="dark" (click)="proximoProduto()" [disabled]="indiceAtual === produtos.length - 1">
               <ion-icon name="chevron-forward-outline" slot="icon-only"></ion-icon>
             </ion-button>
           </ion-col>
