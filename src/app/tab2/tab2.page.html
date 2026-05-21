@@ -1,17 +1,45 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Detalhes do Produto
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  
+  <ion-card>
+    <img class="product-image" alt="Fjallraven Backpack" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" />
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-card-header>
+      <ion-card-title>Fjallraven - Foldsack No. 1</ion-card-title>
+      <ion-card-subtitle>Men's Clothing • $ 109.95</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Sua mochila perfeita para o uso diário e caminhadas na floresta. Guarde seu laptop (até 15 polegadas) na capa acolchoada...</p>
+
+      <ion-grid class="navigation-grid">
+        <ion-row class="ion-align-items-center ion-justify-content-between">
+          <ion-col size="auto">
+            <ion-button fill="clear" color="dark">
+              <ion-icon name="chevron-back-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+          
+          <ion-col size="auto">
+            <strong>ID: 1</strong>
+          </ion-col>
+
+          <ion-col size="auto">
+            <ion-button fill="clear" color="dark">
+              <ion-icon name="chevron-forward-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
