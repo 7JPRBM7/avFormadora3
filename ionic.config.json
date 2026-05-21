@@ -1,0 +1,7 @@
+{
+  "name": "ionicEcommerceApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
