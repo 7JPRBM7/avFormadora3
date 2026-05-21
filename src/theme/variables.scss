@@ -1,2 +1,8 @@
 // For information on how to create your own theme, please refer to:
 // https://ionicframework.com/docs/theming/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --ion-color-primary: #FF6600;
+  --ion-font-family: 'Poppins', sans-serif;
+}
