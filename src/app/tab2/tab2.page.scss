@@ -41,6 +41,11 @@ ion-card-title {
   font-size: 1.2rem;
   font-weight: bold;
   color: #333333;
+  height: 70px;
+  display: -webkit-box;
+  --webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 ion-card-subtitle {
@@ -55,6 +60,20 @@ ion-card-content p {
   line-height: 1.4;
   color: #666666;
   margin-bottom: 20px;
+}
+
+ion-card-content p {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #666666;
+  margin-bottom: 20px;
+  
+  height: 110px;
+  overflow-y: auto;
+}
+
+ion-card-content p::-webkit-scrollbar {
+  display: none;
 }
 
 /* ==========================================
