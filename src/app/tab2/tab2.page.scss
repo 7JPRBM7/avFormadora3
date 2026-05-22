@@ -40,7 +40,7 @@ ion-card {
 ion-card-title {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #333333;
+  color: #FF6600;
   height: 70px;
   display: -webkit-box;
   --webkit-line-clamp: 3;
@@ -49,31 +49,39 @@ ion-card-title {
 }
 
 ion-card-subtitle {
-  color: #FF6600;
+  color: #0099FF;
   font-size: 1rem;
   font-weight: 600;
   margin-top: 5px;
 }
 
-ion-card-content p {
-  font-size: 15px;
-  line-height: 1.4;
-  color: #666666;
-  margin-bottom: 20px;
-}
 
 ion-card-content p {
   font-size: 15px;
   line-height: 1.4;
   color: #666666;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   
   height: 110px;
-  overflow-y: auto;
+  overflow-y: scroll;
+  padding-right: 5px;
 }
 
 ion-card-content p::-webkit-scrollbar {
-  display: none;
+  width: 6px;
+}
+
+ion-card-content p::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+ion-card-content p::-webkit-scrollbar-thumb {
+  background: #FF6600;
+  border-radius: 10px;
+}
+
+ion-card-content p::-webkit-scrollbar-thumb:hover {
+  background: #cc5200;
 }
 
 /* ==========================================
