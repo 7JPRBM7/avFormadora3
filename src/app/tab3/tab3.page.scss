@@ -1,0 +1,84 @@
+/* ==========================================
+      1. VARIÁVEIS LOCAIS DA TELA
+      (Cores exclusivas, espaçamentos específicos da aba)
+   ========================================== */
+
+
+/* ==========================================
+      2. CABEÇALHO E ESTRUTURA GERAL
+      (ion-toolbar, ion-content, fundos da página)
+   ========================================== */
+ion-toolbar {
+  --background: #FF6600;
+}
+
+ion-title {
+  --color: #ffffff;
+}
+
+/* ==========================================
+      3. COMPONENTES PRINCIPAIS
+      (ion-card, imagens de produtos, listas)
+   ========================================== */
+.product-avatar {
+  background-color: #ffffff;
+  padding: 4px;
+  border: 1px solid #eeeeee;
+}
+
+.product-avatar img {
+  object-fit: contain;
+}
+
+/* ==========================================
+      4. TIPOGRAFIA E TEXTOS
+      (Títulos, descrições, preços, destaques)
+   ========================================== */
+ion-label h2 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #FF6600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.category-text {
+  color: #0099FF;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.price-text {
+  color: #0099FF;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+/* ==========================================
+      5. BOTÕES E CONTROLES DE NAVEGAÇÃO
+      (Botões de ação, setas de "Próximo"/"Anterior")
+   ========================================== */
+
+
+/* ==========================================
+      6. CLASSES UTILITÁRIAS E ALINHAMENTOS
+      (Margens customizadas, centralização flexbox)
+   ========================================== */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  text-align: center;
+  color: #666666;
+  padding: 20px;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
