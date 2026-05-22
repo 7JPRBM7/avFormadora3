@@ -19,7 +19,15 @@ O aplicativo é dividido em 3 abas principais:
 * [FakeStore API](https://fakestoreapi.com/) para os dados (Mock API)
 
 ## 🚀 Como executar o projeto localmente
+### Pré-requisitos
+Antes de começar, você precisará ter as seguintes ferramentas instaladas em sua máquina:
+* [Node.js](https://nodejs.org/) (versão LTS recomendada)
+* CLI do Angular: `npm install -g @angular/cli`
+* CLI do Ionic: `npm install -g @ionic/cli`
 
-1. Clone este repositório:
+### Passo a passo
+
+1. **Clone este repositório**
+   Abra o terminal na pasta desejada e baixe o código-fonte:
    ```bash
    git clone [https://github.com/7JPRBM7/avFormadora3.git](https://github.com/7JPRBM7/avFormadora3.git)
