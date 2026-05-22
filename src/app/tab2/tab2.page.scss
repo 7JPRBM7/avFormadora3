@@ -68,15 +68,17 @@ ion-card-content p {
 }
 
 ion-card-content p::-webkit-scrollbar {
+  -webkit-appearance: none;
   width: 6px;
 }
 
 ion-card-content p::-webkit-scrollbar-track {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.05); /* Um fundo quase transparente para dar trilho à roleta */
+  border-radius: 10px;
 }
 
 ion-card-content p::-webkit-scrollbar-thumb {
-  background: #FF6600;
+  background-color: #FF6600;
   border-radius: 10px;
 }
 
